@@ -295,6 +295,9 @@ exports.playCmd = rl => {
                         playOne();
                     } else {
                         log(`INCORRECTO.`);
+                        log(`Respuesta incorrecta.`);
+                        log("INCORRECTO.");
+                        log("Respuesta incorrecta.");
                         log(`Fin del quiz. Aciertos: ${score}`);
                         biglog(`${score}`,'red');
                         rl.prompt();
