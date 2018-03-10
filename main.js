@@ -10,11 +10,11 @@ biglog('CORE Quiz','green');
 
 
 const rl = readline.createInterface({
-        input: process.stdin,
-        output: process.stdout,
-        prompt: colorize("quiz > ",'blue'),
-        completer: (line) => {
-        const completions = 'h help add delete edit list test p play credits q quit'.split(' ');
+    input: process.stdin,
+    output: process.stdout,
+    prompt: colorize("quiz > ",'blue'),
+    completer: (line) => {
+    const completions = 'h help add delete edit list test p play credits q quit'.split(' ');
 const hits = completions.filter((c) => c.startsWith(line));
 // show all completions if none found
 return [hits.length ? hits : completions, line];
