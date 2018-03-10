@@ -294,10 +294,11 @@ exports.playCmd = rl => {
                         log(`CORRECTO - Lleva ${score} aciertos`);
                         playOne();
                     } else {
-                        log(`INCORRECTO.`);
-                        log(`Respuesta incorrecta.`);
-                        log(`Fin del examen. Aciertos: ${score}`);
-                        biglog(`${score}`,'red');
+                        // log(`INCORRECTO.`);
+                        // log(`Respuesta incorrecta.`);
+                        // log(`Fin del examen. Aciertos: ${score}`);
+                        // biglog(`${score}`,'red');
+                        console.log(`Respuesta incorrecta. Fin del examen. Aciertos: ${score}`);
                         rl.prompt();
                     }
                 })
