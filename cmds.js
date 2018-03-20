@@ -291,14 +291,14 @@ exports.playCmd = (socket,rl) => {
                 .then(a => {
                     if (a.toLowerCase().trim() == quiz.answer.toLowerCase().trim()) {
                         score++;
-                        log(`CORRECTO - Lleva ${score} aciertos`);
+                        log(socket,`CORRECTO - Lleva ${score} aciertos`);
                         playOne();
                     } else {
                         // log(`INCORRECTO.`);
                         // log(`Respuesta incorrecta.`);
                         // log(`Fin del examen. Aciertos: ${score}`);
                         // biglog(`${score}`,'red');
-                        socket.write(`Respuesta incorrecta. Fin del examen. Aciertos: ${score} \n`);
+                        log(socket,`Respuesta incorrecta. Fin del examen. Aciertos: ${score} \n`);
                         rl.prompt();
                     }
                 })
